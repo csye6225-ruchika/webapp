@@ -46,4 +46,5 @@ export const User = postgresDBConnection.define('User', {
             fields: ['username']
         }
     ],
+    timestamps: false
 });

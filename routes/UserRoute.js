@@ -1,8 +1,9 @@
 import express from 'express';
-import { createAUser } from '../controllers/UserController.js';
+import { createAUser, getSelfUserDetails, updateSelfUserDetails } from '../controllers/UserController.js';
 import { validateNoQueryParams } from '../middlewares/CommonMiddleware.js';
 import { handleMethodNotAllowed } from '../controllers/CommonMethod.js';
 import { validateUserDetails } from '../middlewares/UserMiddleware.js';
+import { protectRoute } from '../middlewares/BasicAuthorizationMiddleware.js';
 
 export const userRouter = express.Router();
 
@@ -21,8 +22,8 @@ userRouter.options('/', handleMethodNotAllowed)
 
 userRouter.head('/self', handleMethodNotAllowed)
 
-userRouter.get('/self')
-userRouter.put('/self')
+userRouter.get('/self', protectRoute, getSelfUserDetails)
+userRouter.put('/self', protectRoute, updateSelfUserDetails)
 
 userRouter.put('/self', handleMethodNotAllowed)
 userRouter.delete('/self', handleMethodNotAllowed)
