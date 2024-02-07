@@ -1,4 +1,4 @@
-# cyse6225-ruchika
+# webapp
 
 My web application for: [CYSE6225 Network Structures &amp; Cloud Computing](https://spring2024.csye6225.cloud/)
 
