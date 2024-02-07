@@ -1,4 +1,4 @@
-# webapp
+# cyse6225-ruchika
 
 My web application for: [CYSE6225 Network Structures &amp; Cloud Computing](https://spring2024.csye6225.cloud/)
 
@@ -30,8 +30,8 @@ DATABASE_PASSWORD='password'
 DATABASE_HOST='localhost'
 DATABASE_POOL_MAX=5
 DATABASE_POOL_MIN=0
-DATABASE_POOL_ACQUIRE=30000
-DATABASE_POOL_IDLE=10000
+DATABASE_POOL_MAX=30000
+DATABASE_POOL_MAX=10000
 DROP_DATABASE='true'
 ```
 
@@ -134,4 +134,4 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, INSERT, UPDATE, DELETE O
 4. [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
 5. [HEAD & OPTIONS](https://stackoverflow.com/questions/6660019/restful-api-methods-head-options#:~:text=OPTIONS%20tells%20you%20things%20such,status%20code%20would%20be%20returned.)
 6. [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)
-7. 
+
