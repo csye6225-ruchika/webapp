@@ -23,6 +23,9 @@ export const createUser = async (user) => {
   try {
     return await User.create(user);
   } catch (error) {
+    if (error.name) {
+      throw new PostgresDBConnectionRefused();
+    }
     errorLogger.error("Error creating user:", error);
     throw error;
   }
@@ -32,6 +35,9 @@ export const saveUser = async (user) => {
   try {
     return await user.save();
   } catch (error) {
+    if (error.name) {
+      throw new PostgresDBConnectionRefused();
+    }
     errorLogger.error("Error saving user:", error);
     throw error;
   }
