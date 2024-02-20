@@ -34,7 +34,7 @@ describe("Assignment 1 | Test 3 | HealthCheck Invalid Query Param", () => {
   });
 });
 
-/* Assignment 3 */
+/* Assignment 3 Integration test*/
 
 const firstName = "Jane";
 const lastName = "Doe";
