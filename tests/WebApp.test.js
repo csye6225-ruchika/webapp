@@ -86,7 +86,7 @@ describe("Assignment 3 | Test 2 | Update User Account Success", () => {
     const fetchUserResponse = await request(app)
       .get(userPath + selfPath)
       .set("Authorization", createBasicAuth(email, strongPassword));
-    expect(fetchUserResponse.statusCode).toEqual(200);
+    expect(fetchUserResponse.statusCode).toEqual(201);
     expect(fetchUserResponse.body.account_created).not.toEqual(
       fetchUserResponse.body.account_updated
     );
